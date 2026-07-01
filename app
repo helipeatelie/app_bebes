@@ -2,138 +2,134 @@ import streamlit as st
 import json
 import math
 
-# 1. Configuração da Página
+# 1. Configurações Iniciais da Página
 st.set_page_config(
-    page_title="Helipê Ateliê Lúdico - Guia de Desenvolvimento",
-    page_icon="🌱",
-    layout="centered"
+    page_title="Guia Sensorial - Helipê Ateliê Lúdico",
+    page_icon="🌿",
+    layout="centered",
+    initial_sidebar_state="collapsed"
 )
 
-# 2. Estilização CSS Customizada (Cores e tipografia limpas)
+# Customização CSS para paleta de cores (Ajuste as cores Hex conforme o site da Helipê)
 st.markdown("""
     <style>
-    .titulo-principal {
-        color: #2c3e50;
-        text-align: center;
-        font-family: 'Helvetica Neue', sans-serif;
+    .stButton>button {
+        background-color: #A3B18A; /* Exemplo: Verde sálvia */
+        color: white;
+        border-radius: 8px;
+        width: 100%;
     }
-    .subtitulo {
-        color: #7f8c8d;
-        text-align: center;
-        font-size: 1.1em;
-        margin-bottom: 2rem;
+    .stButton>button:hover {
+        background-color: #588157;
+        color: white;
     }
-    .disclaimer-montessori {
-        background-color: #f9f6f0;
-        border-left: 4px solid #d4a373;
+    .disclaimer-box {
+        background-color: #F4F1DE;
         padding: 15px;
-        margin-top: 30px;
-        font-size: 0.9em;
-        color: #555;
-        border-radius: 4px;
-    }
-    .link-loja {
-        text-decoration: none;
-        background-color: #d4a373;
-        color: white !important;
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-weight: bold;
-        display: inline-block;
-        margin-top: 10px;
-    }
-    .link-loja:hover {
-        background-color: #bc8f5b;
+        border-radius: 8px;
+        border-left: 5px solid #E07A5F;
+        margin-bottom: 20px;
     }
     </style>
 """, unsafe_allow_html=True)
 
-# 3. Carregamento dos Dados JSON
+# 2. Carregamento dos Dados JSON
 @st.cache_data
 def carregar_dados():
     try:
-        with open("dados_brinquedos.json", "r", encoding="utf-8") as file:
-            return json.load(file)
+        with open('dados_brinquedos.json', 'r', encoding='utf-8') as f:
+            return json.load(f)
     except FileNotFoundError:
-        st.error("Erro: O arquivo 'dados_brinquedos.json' não foi encontrado. Certifique-se de que ele está na mesma pasta do app.py.")
+        st.error("Arquivo dados_brinquedos.json não encontrado. Verifique o diretório.")
         return None
 
-# 4. Interface Principal
-def main():
-    st.markdown("<h1 class='titulo-principal'>🌱 Helipê Ateliê Lúdico</h1>", unsafe_allow_html=True)
-    st.markdown("<p class='subtitulo'>Descubra o material ideal para nutrir a Mente Absorvente do seu bebê.</p>", unsafe_allow_html=True)
+dados = carregar_dados()
 
-    dados = carregar_dados()
-    if not dados:
-        return
+# 3. Cabeçalho
+st.image("assets/img/logo_helipe.png", use_container_width=True) # Certifique-se de ter essa logo na pasta
+st.title("52 Semanas de Descobertas")
+st.markdown("O Guia Sensorial da Mente Absorvente para o primeiro ano do seu bebê.")
+st.divider()
 
-    # Formulário de Entrada
-    with st.container():
-        col1, col2 = st.columns(2)
-        with col1:
-            idade_input = st.number_input("Idade do bebê", min_value=0, max_value=52, value=3, step=1)
-        with col2:
-            unidade = st.selectbox("Medida", ["Meses", "Semanas"])
+# 4. Inputs do Usuário
+col1, col2 = st.columns(2)
 
-    # Botão de Busca
-    if st.button("Buscar Sugestões"):
-        # 5. Lógica de Conversão (Semanas para Meses)
-        if unidade == "Semanas":
-            meses_calculados = math.floor(idade_input / 4.345) # Média de semanas num mês
-        else:
-            meses_calculados = idade_input
+with col1:
+    idade_input = st.number_input("Idade do bebê:", min_value=1, max_value=52, value=1, step=1)
 
-        if meses_calculados > 12:
-            st.warning("Este guia foca no primeiro ano de vida (0 a 12 meses), o período mais intenso da mente absorvente inconsciente.")
-            return
+with col2:
+    unidade_input = st.selectbox("Medida em:", ["Semanas", "Meses"])
 
-        # 6. Busca no JSON
-        recomendacoes = []
-        for faixa in dados.get("faixas_etarias", []):
-            if faixa["idade_min_meses"] <= meses_calculados <= faixa["idade_max_meses"]:
-                recomendacoes = faixa["recomendacoes"]
-                break
+# 5. Lógica de Conversão (Meses para Semanas)
+semana_calculada = idade_input
 
-        # 7. Renderização dos Resultados
-        if recomendacoes:
-            st.success(f"Idade calculada: aproximadamente {meses_calculados} meses. Veja os materiais adequados para este momento:")
+if unidade_input == "Meses":
+    # 1 mês tem em média 4.34 semanas. Limitamos a 52 semanas (1 ano).
+    semana_calculada = math.ceil(idade_input * 4.34)
+    if semana_calculada > 52:
+        semana_calculada = 52
+    st.caption(f"💡 {idade_input} meses correspondem aproximadamente à semana {semana_calculada}.")
+
+# 6. Lógica de Busca no JSON e Renderização
+if dados:
+    faixa_encontrada = None
+    
+    # Localiza o bloco do mês correspondente
+    for faixa in dados.get("faixas_etarias", []):
+        if faixa["semana_min"] <= semana_calculada <= faixa["semana_max"]:
+            faixa_encontrada = faixa
+            break
+
+    if faixa_encontrada:
+        st.subheader(f"✨ Fase Atual: {faixa_encontrada['tema_fase']}")
+        st.write(f"Recomendações baseadas no **{faixa_encontrada['mes_referencia']}** (Semanas {faixa_encontrada['semana_min']} a {faixa_encontrada['semana_max']}).")
+        
+        # Filtra atividades da semana exata ou traz todas do período se não houver especificidade
+        atividades_semana = [
+            rec for rec in faixa_encontrada.get("recomendacoes", []) 
+            if rec.get("semana_especifica") == semana_calculada or rec.get("semana_especifica") is None
+        ]
+
+        if not atividades_semana:
+            # Fallback: exibe todas do mês se não tiver uma específica para a semana
+            atividades_semana = faixa_encontrada.get("recomendacoes", [])
+
+        st.divider()
+
+        # Renderiza os cards de atividades
+        for item in atividades_semana:
+            col_img, col_txt = st.columns([1, 2])
             
-            for item in recomendacoes:
-                st.markdown("---")
-                st.subheader(item["titulo"])
-                
-                col_img, col_texto = st.columns([1, 2])
-                
-                with col_img:
-                    # Tenta carregar a imagem, se falhar mostra um aviso amigável
-                    try:
-                        st.image(item["imagem_caminho"], use_container_width=True)
-                    except:
-                        st.info("Imagem do material")
-                
-                with col_texto:
-                    st.write("**Apresentação Pedagógica:**")
-                    st.write(item["atividade_descricao"])
-                    st.write(f"⏱️ **Tempo de concentração esperado:** {item['tempo_duracao']}")
-                    
-                    st.markdown(f"<a href='{item['link_produto']}' target='_blank' class='link-loja'>Ver na loja online</a>", unsafe_allow_html=True)
+            with col_img:
+                try:
+                    st.image(item["imagem_caminho"], use_container_width=True)
+                except:
+                    # Imagem de fallback caso a original não esteja na pasta
+                    st.image("https://via.placeholder.com/300x300.png?text=Imagem+Atividade", use_container_width=True)
             
-            # 8. Disclaimer Baseado em "A Mente Absorvente"
-            st.markdown("""
-            <div class='disclaimer-montessori'>
-                <strong>O Papel do Adulto Preparado:</strong><br>
-                Segundo Maria Montessori em <em>"A Mente Absorvente"</em>, o bebê de 0 a 3 anos possui uma forma de inteligência inconsciente que absorve o ambiente como uma esponja. 
-                A mão é o principal instrumento dessa inteligência. Nossa recomendação é que você prepare um ambiente seguro e ofereça o material para que o bebê o explore livremente. 
-                Observe sem interromper: a verdadeira aprendizagem acontece no esforço contínuo e na repetição no ritmo único de cada criança.
-            </div>
-            """, unsafe_allow_html=True)
-            
-            # Botão de Nova Consulta
-            if st.button("Fazer Nova Consulta"):
-                st.rerun()
+            with col_txt:
+                st.markdown(f"### {item['titulo']}")
+                st.markdown(f"**Como fazer:** {item['atividade_descricao']}")
+                st.markdown(f"⏱️ **Tempo sugerido:** {item['tempo_duracao']}")
                 
-        else:
-            st.info("Ainda estamos preparando os materiais perfeitos para esta exata fase no nosso catálogo.")
+                # Botão de Compra se houver link de produto
+                if item.get("link_produto"):
+                    st.link_button("Ver Produto no Ateliê", item["link_produto"])
+                
+            st.divider()
 
-if __name__ == "__main__":
-    main()
+        # 7. Selo de Qualidade e Disclaimer
+        st.markdown("""
+        <div class="disclaimer-box">
+            <strong>Qualidade Helipê:</strong> Nossos materiais são artesanais, finalizados com óleo de tungue puro e fios 100% algodão, garantindo total segurança para a exploração tátil e oral do seu bebê.
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.info("🌱 Lembrete Pedagógico: Cada bebê possui um ritmo único de desenvolvimento. A Mente Absorvente floresce na repetição e sem pressão. Observe seu filho e siga o tempo dele.")
+
+    else:
+        st.warning("Ops! Não encontramos atividades cadastradas para essa idade. O guia cobre de 1 a 52 semanas.")
+
+# 8. Rodapé com Link pra Loja Geral
+st.markdown("<center>Quer conhecer a linha completa?</center>", unsafe_allow_html=True)
+st.link_button("Visitar www.helipe.com.br", "https://www.helipe.com.br?utm_source=app_brinde&utm_medium=referral&utm_campaign=rodape")

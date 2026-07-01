@@ -1,0 +1,568 @@
+{
+  "faixas_etarias": [
+    {
+      "semana_min": 1,
+      "semana_max": 4,
+      "mes_referencia": "Mês 1",
+      "tema_fase": "O Despertar Visual e Tátil",
+      "recomendacoes": [
+        {
+          "id": "sem1_luz_sombra",
+          "semana_especifica": 1,
+          "titulo": "A Luz e a Sombra",
+          "imagem_caminho": "assets/img/sem1_luz_sombra.jpg",
+          "link_produto": null,
+          "atividade_descricao": "Coloque o bebê deitado de costas perto de uma janela com luz natural indireta para observar o contraste das sombras na parede.",
+          "tempo_duracao": "Livre, sob observação"
+        },
+        {
+          "id": "sem2_rosto_humano",
+          "semana_especifica": 2,
+          "titulo": "O Rosto Humano",
+          "imagem_caminho": "assets/img/sem2_rosto_humano.jpg",
+          "link_produto": null,
+          "atividade_descricao": "Deite-se de frente para o bebê e converse suavemente, permitindo que ele rastreie o movimento da sua boca e dos seus olhos.",
+          "tempo_duracao": "5 a 10 minutos"
+        },
+        {
+          "id": "sem3_munari",
+          "semana_especifica": 3,
+          "titulo": "O Móbile Munari",
+          "imagem_caminho": "assets/img/sem3_munari.jpg",
+          "link_produto": "https://www.helipe.com.br/mobile-munari?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Introduza o Móbile Munari. Com suas formas geométricas em preto e branco e a esfera de vidro que reflete a luz, ele oferece o contraste perfeito para que o bebê pratique o foco visual sustentado.",
+          "tempo_duracao": "Até o bebê desviar o olhar"
+        },
+        {
+          "id": "sem4_toque_suave",
+          "semana_especifica": 4,
+          "titulo": "Toque Suave",
+          "imagem_caminho": "assets/img/sem4_toque_suave.jpg",
+          "link_produto": "https://www.helipe.com.br/paninho-pikler?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Passe delicadamente o Paninho Pikler nas mãos, pés e bochechas do bebê. O tecido macio e respirável oferece uma primeira experiência de contraste tátil seguro.",
+          "tempo_duracao": "Durante a troca ou banho"
+        }
+      ]
+    },
+    {
+      "semana_min": 5,
+      "semana_max": 8,
+      "mes_referencia": "Mês 2",
+      "tema_fase": "Foco e Cores Primárias",
+      "recomendacoes": [
+        {
+          "id": "sem5_octaedro",
+          "semana_especifica": 5,
+          "titulo": "O Móbile Octaedro",
+          "imagem_caminho": "assets/img/sem5_octaedro.jpg",
+          "link_produto": "https://www.helipe.com.br/mobile-octaedro?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Substitua o Munari pelo Móbile Octaedro. Os três poliedros em cores primárias (amarelo, azul e vermelho) atraem a visão que agora começa a distinguir tons vibrantes.",
+          "tempo_duracao": "Até o bebê perder o interesse"
+        },
+        {
+          "id": "sem6_munari_movimento",
+          "semana_especifica": 6,
+          "titulo": "O Munari em Movimento",
+          "imagem_caminho": "assets/img/sem6_munari_movimento.jpg",
+          "link_produto": "https://www.helipe.com.br/mobile-munari?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Coloque o Móbile Munari novamente, mas deixe uma janela levemente aberta. O vento suave fará as formas dançarem, estimulando o rastreio de um movimento não linear.",
+          "tempo_duracao": "5 a 15 minutos"
+        },
+        {
+          "id": "sem7_gobbi",
+          "semana_especifica": 7,
+          "titulo": "O Móbile Gobbi",
+          "imagem_caminho": "assets/img/sem7_gobbi.jpg",
+          "link_produto": "https://www.helipe.com.br/mobile-gobbi?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Apresente o Móbile Gobbi. As esferas revestidas revelam uma transição sutil de tons da mesma cor, introduzindo a gradação e a profundidade no campo de visão.",
+          "tempo_duracao": "Livre, sob observação"
+        },
+        {
+          "id": "sem8_massagem",
+          "semana_especifica": 8,
+          "titulo": "Massagem Sensorial",
+          "imagem_caminho": "assets/img/sem8_massagem.jpg",
+          "link_produto": null,
+          "atividade_descricao": "Após o banho, reserve 10 minutos para uma massagem com movimentos firmes e rítmicos, ajudando o bebê a mapear os limites do próprio corpo.",
+          "tempo_duracao": "10 minutos"
+        }
+      ]
+    },
+    {
+      "semana_min": 9,
+      "semana_max": 12,
+      "mes_referencia": "Mês 3",
+      "tema_fase": "A Coordenação Olho-Mão",
+      "recomendacoes": [
+        {
+          "id": "sem9_dancarinos",
+          "semana_especifica": 9,
+          "titulo": "O Móbile Dançarinos",
+          "imagem_caminho": "assets/img/sem9_dancarinos.jpg",
+          "link_produto": "https://www.helipe.com.br/mobile-dancarinos?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Introduza o Móbile Dançarinos. As figuras estilizadas que rodopiam e brilham com o fluxo de ar oferecem um movimento dinâmico que hipnotiza e incentiva os primeiros movimentos dos bracinhos.",
+          "tempo_duracao": "Uso livre"
+        },
+        {
+          "id": "sem10_primeiro_agarre",
+          "semana_especifica": 10,
+          "titulo": "O Primeiro Agarre",
+          "imagem_caminho": "assets/img/sem10_primeiro_agarre.jpg",
+          "link_produto": "https://www.helipe.com.br/pulseira-3-contas?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Ofereça a Pulseira 3 contas de madeira tocando levemente a palma da mão do bebê. O reflexo de agarrar começará a se tornar um movimento intencional.",
+          "tempo_duracao": "2 a 5 minutos"
+        },
+        {
+          "id": "sem11_som_cadeira",
+          "semana_especifica": 11,
+          "titulo": "Som na Cadeira",
+          "imagem_caminho": "assets/img/sem11_som_cadeira.jpg",
+          "link_produto": null,
+          "atividade_descricao": "Amarre pequenos guizos nas meias do bebê. Ao chutar, ele ouvirá o som, conectando a causa (seu movimento) ao efeito (som).",
+          "tempo_duracao": "5 a 10 minutos"
+        },
+        {
+          "id": "sem12_bola_ar",
+          "semana_especifica": 12,
+          "titulo": "A Bola no Ar",
+          "imagem_caminho": "assets/img/sem12_bola_ar.jpg",
+          "link_produto": "https://www.helipe.com.br/bola-montessori?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Pendure a Bola Montessori desmontável por um elástico sobre o bebê. Com suas cores complementares e gomos que facilitam a pegada, ela incentiva o bebê a esticar os braços e chutar intencionalmente.",
+          "tempo_duracao": "Livre, sob supervisão"
+        }
+      ]
+    },
+    {
+      "semana_min": 13,
+      "semana_max": 16,
+      "mes_referencia": "Mês 4",
+      "tema_fase": "Alcançar e Segurar",
+      "recomendacoes": [
+        {
+          "id": "sem13_encontro_maos",
+          "semana_especifica": 13,
+          "titulo": "Encontro das Mãos",
+          "imagem_caminho": "assets/img/sem13_encontro_maos.jpg",
+          "link_produto": "https://www.helipe.com.br/chocalho-croche?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Ofereça o Chocalho de crochê colorido. A textura macia do fio de algodão é gentil para as mãos que ainda não controlam perfeitamente a força, permitindo que ele segure com ambas as mãos na linha média do peito.",
+          "tempo_duracao": "5 a 10 minutos"
+        },
+        {
+          "id": "sem14_toque_madeira",
+          "semana_especifica": 14,
+          "titulo": "O Toque da Madeira",
+          "imagem_caminho": "assets/img/sem14_toque_madeira.jpg",
+          "link_produto": "https://www.helipe.com.br/argola-madeira-croche?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Suspenda a Argola de madeira com crochê a uma altura que o bebê consiga agarrar e puxar, sentindo a diferença entre a madeira lisa e o fio texturizado.",
+          "tempo_duracao": "Uso livre"
+        },
+        {
+          "id": "sem15_espelho",
+          "semana_especifica": 15,
+          "titulo": "Espelho, Espelho",
+          "imagem_caminho": "assets/img/sem15_espelho.jpg",
+          "link_produto": null,
+          "atividade_descricao": "Coloque um espelho inquebrável rente ao chão. O bebê passará minutos focado em \"outro bebê\", estimulando o reconhecimento facial e os movimentos de levantar a cabeça.",
+          "tempo_duracao": "Livre durante o Tummy Time"
+        },
+        {
+          "id": "sem16_danca_fitas",
+          "semana_especifica": 16,
+          "titulo": "A Dança das Fitas",
+          "imagem_caminho": "assets/img/sem16_danca_fitas.jpg",
+          "link_produto": "https://www.helipe.com.br/argola-fitas-waldorf?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Segure a Argola de fitas Waldorf sobre o bebê e passe as fitas coloridas levemente sobre seus braços e pernas, narrando as cores que ele vê.",
+          "tempo_duracao": "3 a 5 minutos"
+        }
+      ]
+    },
+    {
+      "semana_min": 17,
+      "semana_max": 20,
+      "mes_referencia": "Mês 5",
+      "tema_fase": "O Som e a Transferência",
+      "recomendacoes": [
+        {
+          "id": "sem17_rastreio_sonoro",
+          "semana_especifica": 17,
+          "titulo": "Rastreio Sonoro",
+          "imagem_caminho": "assets/img/sem17_rastreio_sonoro.jpg",
+          "link_produto": "https://www.helipe.com.br/bastao-chocalho?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Balance o Bastão chocalho fora do campo de visão imediato do bebê para que ele vire a cabeça buscando a origem do som suave de madeira.",
+          "tempo_duracao": "2 a 5 minutos"
+        },
+        {
+          "id": "sem18_arte_transferencia",
+          "semana_especifica": 18,
+          "titulo": "A Arte da Transferência",
+          "imagem_caminho": "assets/img/sem18_arte_transferencia.jpg",
+          "link_produto": "https://www.helipe.com.br/pulseira-3-contas?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Entregue a Pulseira 3 contas de madeira na mão direita do bebê e observe a concentração enquanto ele tenta passá-la para a mão esquerda.",
+          "tempo_duracao": "Livre, sob supervisão"
+        },
+        {
+          "id": "sem19_texturas_cotidiano",
+          "semana_especifica": 19,
+          "titulo": "Texturas do Cotidiano",
+          "imagem_caminho": "assets/img/sem19_texturas_cotidiano.jpg",
+          "link_produto": null,
+          "atividade_descricao": "Deixe o bebê tocar superfícies seguras da casa: um tapete felpudo, o piso frio, a grama do jardim.",
+          "tempo_duracao": "5 a 10 minutos"
+        },
+        {
+          "id": "sem20_sacudindo_vigor",
+          "semana_especifica": 20,
+          "titulo": "Sacudindo com Vigor",
+          "imagem_caminho": "assets/img/sem20_sacudindo_vigor.jpg",
+          "link_produto": "https://www.helipe.com.br/chocalho-argolas?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Ofereça o Chocalho de Argolas. O design anatômico permite um agarre firme, e o bater da madeira natural estimula o bebê a chacoalhar vigorosamente, percebendo sua própria força.",
+          "tempo_duracao": "Uso livre"
+        }
+      ]
+    },
+    {
+      "semana_min": 21,
+      "semana_max": 24,
+      "mes_referencia": "Mês 6",
+      "tema_fase": "Causa e Efeito",
+      "recomendacoes": [
+        {
+          "id": "sem21_mundo_boca",
+          "semana_especifica": 21,
+          "titulo": "O Mundo na Boca",
+          "imagem_caminho": "assets/img/sem21_mundo_boca.jpg",
+          "link_produto": "https://www.helipe.com.br/cordao-4-bolas?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Permita que o bebê explore livremente o Cordão com 4 bolas de 20mm. A madeira natural nutre a necessidade de morder e alivia o incômodo das gengivas (sempre com supervisão).",
+          "tempo_duracao": "Livre, sob supervisão estrita"
+        },
+        {
+          "id": "sem22_puxar_soltar",
+          "semana_especifica": 22,
+          "titulo": "Puxar e Soltar",
+          "imagem_caminho": "assets/img/sem22_puxar_soltar.jpg",
+          "link_produto": "https://www.helipe.com.br/bola-croche-argolas?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Ofereça a Bola de crochê com Argolas. O bebê pode segurar pela bola macia e usar as argolas de madeira como mordedores, experimentando diferentes pressões na mordida.",
+          "tempo_duracao": "Uso livre"
+        },
+        {
+          "id": "sem23_brincadeira_agua",
+          "semana_especifica": 23,
+          "titulo": "Brincadeira com Água",
+          "imagem_caminho": "assets/img/sem23_brincadeira_agua.jpg",
+          "link_produto": null,
+          "atividade_descricao": "Coloque um pouco de água em uma assadeira rasa com brinquedos flutuantes e deixe o bebê bater as mãos na água (durante o tummy time).",
+          "tempo_duracao": "5 a 10 minutos"
+        },
+        {
+          "id": "sem24_roda_gira",
+          "semana_especifica": 24,
+          "titulo": "A Roda que Gira",
+          "imagem_caminho": "assets/img/sem24_roda_gira.jpg",
+          "link_produto": "https://www.helipe.com.br/chocalho-roldini?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Apresente o Chocalho Roldini de Madeira. O movimento cilíndrico introduz uma nova forma geométrica à mão do bebê, rodando entre seus dedos enquanto produz um som calmante.",
+          "tempo_duracao": "Uso livre"
+        }
+      ]
+    },
+    {
+      "semana_min": 25,
+      "semana_max": 28,
+      "mes_referencia": "Mês 7",
+      "tema_fase": "Conquistando o Espaço",
+      "recomendacoes": [
+        {
+          "id": "sem25_isca_perfeita",
+          "semana_especifica": 25,
+          "titulo": "A Isca Perfeita",
+          "imagem_caminho": "assets/img/sem25_isca_perfeita.jpg",
+          "link_produto": "https://www.helipe.com.br/bola-montessori?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Desmonte a Bola Montessori e deixe as peças espalhadas num raio curto ao redor do bebê no tapete, incentivando-o a girar o próprio eixo para pegar os gomos coloridos.",
+          "tempo_duracao": "Até o bebê alcançar as peças"
+        },
+        {
+          "id": "sem26_amigo_mordedor",
+          "semana_especifica": 26,
+          "titulo": "O Amigo Mordedor",
+          "imagem_caminho": "assets/img/sem26_amigo_mordedor.jpg",
+          "link_produto": "https://www.helipe.com.br/argola-coelho?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "O Argola Coelho verde torna-se o companheiro ideal. As orelhas em crochê absorvem a saliva, enquanto a madeira oferece firmeza para coçar a gengiva.",
+          "tempo_duracao": "Uso livre"
+        },
+        {
+          "id": "sem27_som_guia",
+          "semana_especifica": 27,
+          "titulo": "Som que Guia",
+          "imagem_caminho": "assets/img/sem27_som_guia.jpg",
+          "link_produto": "https://www.helipe.com.br/bastao-chocalho-guizos?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Use o Bastão chocalho de guizos no chão. Balance-o e incentive o bebê a rastejar em direção ao som agudo.",
+          "tempo_duracao": "5 a 10 minutos"
+        },
+        {
+          "id": "sem28_bolachas_coloridas",
+          "semana_especifica": 28,
+          "titulo": "As Bolachas Coloridas",
+          "imagem_caminho": "assets/img/sem28_bolachas_coloridas.jpg",
+          "link_produto": "https://www.helipe.com.br/argola-bolachas-arco-iris?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Entregue a Argola Bolachas com as cores do arco-íris. O contraste entre o arco-íris vibrante e a madeira atrai a visão, enquanto ele gira os discos com os dedinhos, refinando a motricidade.",
+          "tempo_duracao": "Uso livre"
+        }
+      ]
+    },
+    {
+      "semana_min": 29,
+      "semana_max": 32,
+      "mes_referencia": "Mês 8",
+      "tema_fase": "A Permanência do Objeto",
+      "recomendacoes": [
+        {
+          "id": "sem29_cade_brinquedo",
+          "semana_especifica": 29,
+          "titulo": "Cadê o Brinquedo?",
+          "imagem_caminho": "assets/img/sem29_cade_brinquedo.jpg",
+          "link_produto": "https://www.helipe.com.br/argola-madeira-croche?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Esconda parcialmente a Argola de madeira com crochê sob um pano e incentive o bebê a puxar o pano para encontrá-la.",
+          "tempo_duracao": "5 minutos"
+        },
+        {
+          "id": "sem30_cade_mamae",
+          "semana_especifica": 30,
+          "titulo": "Cadê a Mamãe?",
+          "imagem_caminho": "assets/img/sem30_cade_mamae.jpg",
+          "link_produto": "https://www.helipe.com.br/paninho-pikler?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Use o Paninho Pikler para a clássica brincadeira de \"esconde-esconde\" no seu próprio rosto, revelando-se com um grande sorriso.",
+          "tempo_duracao": "Até o bebê perder o interesse"
+        },
+        {
+          "id": "sem31_concerto_bateria",
+          "semana_especifica": 31,
+          "titulo": "Concerto de Bateria",
+          "imagem_caminho": "assets/img/sem31_concerto_bateria.jpg",
+          "link_produto": "https://www.helipe.com.br/chocalho-argolas?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Deixe o bebê segurar o Chocalho de Argolas em uma mão e o Bastão chocalho na outra, batendo os dois para criar seu próprio ritmo no chão.",
+          "tempo_duracao": "Uso livre"
+        },
+        {
+          "id": "sem32_rolar_perseguir",
+          "semana_especifica": 32,
+          "titulo": "Rolar e Perseguir",
+          "imagem_caminho": "assets/img/sem32_rolar_perseguir.jpg",
+          "link_produto": "https://www.helipe.com.br/bola-montessori?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Use a Bola Montessori desmontável montada. Role-a pelo chão; seu formato orgânico faz com que ela não role muito rápido, sendo perfeita para o bebê engatinhar atrás e alcançá-la.",
+          "tempo_duracao": "10 a 15 minutos"
+        }
+      ]
+    },
+    {
+      "semana_min": 33,
+      "semana_max": 36,
+      "mes_referencia": "Mês 9",
+      "tema_fase": "O Movimento de Pinça",
+      "recomendacoes": [
+        {
+          "id": "sem33_exploracao_fina",
+          "semana_especifica": 33,
+          "titulo": "Exploração Fina",
+          "imagem_caminho": "assets/img/sem33_exploracao_fina.jpg",
+          "link_produto": "https://www.helipe.com.br/cordao-4-bolas?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Ofereça o Cordão com 4 bolas de 20mm. Observe como o bebê tenta agora segurar as esferas individualmente usando a ponta dos dedos (o movimento de pinça).",
+          "tempo_duracao": "Livre, sob supervisão estrita"
+        },
+        {
+          "id": "sem34_fio_tecido",
+          "semana_especifica": 34,
+          "titulo": "O Fio e o Tecido",
+          "imagem_caminho": "assets/img/sem34_fio_tecido.jpg",
+          "link_produto": null,
+          "atividade_descricao": "Apresente pequenos retalhos de tecidos diferentes (seda, feltro, algodão) dentro de uma caixa vazia para o bebê puxar um a um.",
+          "tempo_duracao": "10 a 15 minutos"
+        },
+        {
+          "id": "sem35_separar_unidas",
+          "semana_especifica": 35,
+          "titulo": "Separar o Unidas",
+          "imagem_caminho": "assets/img/sem35_separar_unidas.jpg",
+          "link_produto": "https://www.helipe.com.br/bola-croche-argolas?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Com a Bola de crochê com Argolas, mostre como puxar apenas a argola de madeira, isolando o movimento de pinça no aro fino enquanto a outra mão apoia a bola.",
+          "tempo_duracao": "Uso livre"
+        },
+        {
+          "id": "sem36_balanco_fitas",
+          "semana_especifica": 36,
+          "titulo": "O Balanço das Fitas",
+          "imagem_caminho": "assets/img/sem36_balanco_fitas.jpg",
+          "link_produto": "https://www.helipe.com.br/argola-fitas-waldorf?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Sentado com firmeza, o bebê pode segurar a Argola de fitas Waldorf e sacudi-la com vigor, adorando o efeito visual grandioso que seu pequeno esforço produz.",
+          "tempo_duracao": "Uso livre"
+        }
+      ]
+    },
+    {
+      "semana_min": 37,
+      "semana_max": 40,
+      "mes_referencia": "Mês 10",
+      "tema_fase": "O Cesto de Tesouros",
+      "recomendacoes": [
+        {
+          "id": "sem37_cesto_heuristico",
+          "semana_especifica": 37,
+          "titulo": "O Cesto Heurístico Básico",
+          "imagem_caminho": "assets/img/sem37_cesto_heuristico.jpg",
+          "link_produto": "https://www.helipe.com.br/chocalho-roldini?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Prepare um cesto baixo com objetos da natureza: uma pinha grande, uma colher de pau, uma esponja vegetal e o Chocalho Roldini de Madeira. Deixe-o esvaziar e encher.",
+          "tempo_duracao": "15 a 20 minutos"
+        },
+        {
+          "id": "sem38_buraco_magico",
+          "semana_especifica": 38,
+          "titulo": "O Buraco Mágico",
+          "imagem_caminho": "assets/img/sem38_buraco_magico.jpg",
+          "link_produto": null,
+          "atividade_descricao": "Faça um furo na tampa de uma caixa de papelão. Ensine o bebê a jogar pequenos blocos (ou bolas seguras) pelo buraco e abrir a caixa para pegá-los.",
+          "tempo_duracao": "10 minutos"
+        },
+        {
+          "id": "sem39_encaixes_sonoros",
+          "semana_especifica": 39,
+          "titulo": "Encaixes Sonoros",
+          "imagem_caminho": "assets/img/sem39_encaixes_sonoros.jpg",
+          "link_produto": "https://www.helipe.com.br/bastao-chocalho-guizos?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Dê ao bebê uma bacia de metal leve e o Bastão chocalho de guizos. Ele vai adorar soltar o bastão dentro da bacia para ouvir o estrondo metálico.",
+          "tempo_duracao": "Uso livre"
+        },
+        {
+          "id": "sem40_desmontar_bola",
+          "semana_especifica": 40,
+          "titulo": "Desmontar a Bola",
+          "imagem_caminho": "assets/img/sem40_desmontar_bola.jpg",
+          "link_produto": "https://www.helipe.com.br/bola-montessori?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Ofereça a Bola Montessori desmontável e mostre lentamente como retirar um gomo. O desafio de desmontar será a nova obsessão intelectual dele.",
+          "tempo_duracao": "Livre, sob observação"
+        }
+      ]
+    },
+    {
+      "semana_min": 41,
+      "semana_max": 44,
+      "mes_referencia": "Mês 11",
+      "tema_fase": "A Verticalidade",
+      "recomendacoes": [
+        {
+          "id": "sem41_escalando_obstaculos",
+          "semana_especifica": 41,
+          "titulo": "Escalando Obstáculos",
+          "imagem_caminho": "assets/img/sem41_escalando_obstaculos.jpg",
+          "link_produto": "https://www.helipe.com.br/chocalho-croche?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Faça uma pilha de almofadas no chão com o Chocalho de crochê colorido no topo, incentivando o bebê a engatinhar sobre os obstáculos para alcançar a recompensa fofinha.",
+          "tempo_duracao": "10 a 15 minutos"
+        },
+        {
+          "id": "sem42_alcancar_alto",
+          "semana_especifica": 42,
+          "titulo": "Alcançar o Alto",
+          "imagem_caminho": "assets/img/sem42_alcancar_alto.jpg",
+          "link_produto": "https://www.helipe.com.br/argola-coelho?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Coloque a Argola Coelho verde em uma prateleira baixa ou pufe, onde o bebê precise se ajoelhar ou se apoiar de pé para resgatá-la.",
+          "tempo_duracao": "Livre, com o ambiente seguro"
+        },
+        {
+          "id": "sem43_papel_rasgar",
+          "semana_especifica": 43,
+          "titulo": "Papel para Rasgar",
+          "imagem_caminho": "assets/img/sem43_papel_rasgar.jpg",
+          "link_produto": null,
+          "atividade_descricao": "Revistas velhas ou papel pardo. Deixe o bebê exercitar a coordenação bilateral e a força rasgando papéis.",
+          "tempo_duracao": "10 minutos"
+        },
+        {
+          "id": "sem44_bolsa_misteriosa",
+          "semana_especifica": 44,
+          "titulo": "A Bolsa Misteriosa",
+          "imagem_caminho": "assets/img/sem44_bolsa_misteriosa.jpg",
+          "link_produto": "https://www.helipe.com.br/chocalho-argolas?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Coloque o Paninho Pikler parcialmente pendurado de uma gaveta ou bolsa que ele alcance, encorajando-o a puxar e revelar o que tem dentro (coloque o Chocalho de Argolas preso na ponta).",
+          "tempo_duracao": "Uso livre"
+        }
+      ]
+    },
+    {
+      "semana_min": 45,
+      "semana_max": 52,
+      "mes_referencia": "Mês 12",
+      "tema_fase": "A Integração do Ano 1",
+      "recomendacoes": [
+        {
+          "id": "sem45_empilhar_derrubar",
+          "semana_especifica": 45,
+          "titulo": "Empilhar e Derrubar",
+          "imagem_caminho": "assets/img/sem45_empilhar_derrubar.jpg",
+          "link_produto": "https://www.helipe.com.br/bola-montessori?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Crie torres com potes plásticos ou blocos leves e mostre como derrubá-los usando a Bola Montessori.",
+          "tempo_duracao": "10 a 15 minutos"
+        },
+        {
+          "id": "sem46_pareamentos_iniciais",
+          "semana_especifica": 46,
+          "titulo": "Pareamentos Iniciais",
+          "imagem_caminho": "assets/img/sem46_pareamentos_iniciais.jpg",
+          "link_produto": "https://www.helipe.com.br/pulseira-3-contas?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Apresente a Pulseira 3 contas de madeira. O bebê pode tentar passar a argola pelo bastão ou pelo dedo, compreendendo os espaços.",
+          "tempo_duracao": "Livre, sob observação"
+        },
+        {
+          "id": "sem47_texturas_mesa",
+          "semana_especifica": 47,
+          "titulo": "Texturas à Mesa",
+          "imagem_caminho": "assets/img/sem47_texturas_mesa.jpg",
+          "link_produto": null,
+          "atividade_descricao": "Deixe o bebê pintar usando um mingau ralo colorido com corantes naturais (beterraba ou espinafre) sobre papel sulfite no cadeirão.",
+          "tempo_duracao": "15 a 20 minutos"
+        },
+        {
+          "id": "sem48_danca_chuva",
+          "semana_especifica": 48,
+          "titulo": "Dança da Chuva",
+          "imagem_caminho": "assets/img/sem48_danca_chuva.jpg",
+          "link_produto": "https://www.helipe.com.br/argola-fitas-waldorf?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Coloque uma música animada e mostre como agitar a Argola de fitas Waldorf no ritmo da música.",
+          "tempo_duracao": "5 a 10 minutos"
+        },
+        {
+          "id": "sem49_transferencia_utensilio",
+          "semana_especifica": 49,
+          "titulo": "Transferência com Utensílio",
+          "imagem_caminho": "assets/img/sem49_transferencia_utensilio.jpg",
+          "link_produto": null,
+          "atividade_descricao": "Ofereça duas tigelas (uma com grãos de feijão grandes e crus) e uma colher, incentivando a transferência (sob máxima supervisão).",
+          "tempo_duracao": "Livre, com supervisão total"
+        },
+        {
+          "id": "sem50_cesto_avancado",
+          "semana_especifica": 50,
+          "titulo": "O Cesto de Tesouros Avançado",
+          "imagem_caminho": "assets/img/sem50_cesto_avancado.jpg",
+          "link_produto": "https://www.helipe.com.br/cordao-4-bolas?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Misture o Cordão com 4 bolas, a Argola Bolachas arco-íris e potes da cozinha. Ele analisará as cores vibrantes, girará as bolachas e baterá a madeira nas panelas.",
+          "tempo_duracao": "15 a 30 minutos"
+        },
+        {
+          "id": "sem51_puxar_levar",
+          "semana_especifica": 51,
+          "titulo": "Puxar e Levar",
+          "imagem_caminho": "assets/img/sem51_puxar_levar.jpg",
+          "link_produto": "https://www.helipe.com.br/chocalho-roldini?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Amarre um barbante curto no Chocalho Roldini de Madeira. Mostre ao bebê como puxar o brinquedo enquanto ele caminha de lado ou engatinha, observando as rodinhas girarem.",
+          "tempo_duracao": "Uso livre"
+        },
+        {
+          "id": "sem52_celebracao_autonomia",
+          "semana_especifica": 52,
+          "titulo": "A Celebração da Autonomia",
+          "imagem_caminho": "assets/img/sem52_celebracao_autonomia.jpg",
+          "link_produto": "https://www.helipe.com.br/paninho-pikler?utm_source=app_brinde&utm_medium=referral&utm_campaign=guia_52semanas",
+          "atividade_descricao": "Ofereça o Paninho Pikler no chão com vários materiais da Helipê em cima, como um piquenique sensorial. Observe sem interromper. Veja como ele aplica a pinça, a transferência, o rastejar e a exploração oral. Você nutriu uma mente absorvente forte e feliz!",
+          "tempo_duracao": "Tempo de brincadeira livre"
+        }
+      ]
+    }
+  ]
+}

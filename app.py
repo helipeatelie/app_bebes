@@ -24,9 +24,14 @@ st.markdown("""
     <link rel="manifest" href="https://cdn.jsdelivr.net/gh/helipeatelie/app_bebes@main/manifest.json">
     
     <style>
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    header {visibility: hidden;}
+    #MainMenu {visibility: hidden !important;}
+    footer {visibility: hidden !important;}
+    header {visibility: hidden !important;}
+
+    /* Remove a marca do Streamlit que às vezes fica no rodapé */
+    .stApp > footer { display: none !important; }
+
+    /* Ajuste para remover espaços desnecessários */
     .block-container { padding-top: 1rem; padding-bottom: 0rem; }
     .stButton>button { background-color: #A3B18A; color: white; border-radius: 8px; width: 100%; }
     .stButton>button:hover { background-color: #588157; color: white; }

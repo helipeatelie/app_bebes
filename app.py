@@ -12,7 +12,17 @@ st.set_page_config(
 
 # 2. Conexão PWA, Customização CSS e Banner de Instalação
 st.markdown("""
-    <link rel="manifest" href="manifest.json">
+    <!-- Força o reconhecimento de App no iOS (iPhone) e Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Guia Helipê">
+    
+    <!-- Puxa o seu ícone e o manifesto através de um servidor de distribuição (CDN) para contornar o bloqueio -->
+    <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/helipeatelie/app_bebes@main/assets/img/icon-192.png">
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/helipeatelie/app_bebes@main/assets/img/icon-192.png">
+    <link rel="manifest" href="https://cdn.jsdelivr.net/gh/helipeatelie/app_bebes@main/manifest.json">
+    
     <style>
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
@@ -24,6 +34,7 @@ st.markdown("""
     .install-banner { display: none; background-color: #E07A5F; color: white; text-align: center; padding: 12px; border-radius: 8px; margin-bottom: 20px; font-size: 0.9em; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
     @media (max-width: 768px) { .install-banner { display: block; } }
     </style>
+    
     <div class="install-banner">
         📲 Dica: Tenha o Guia sempre à mão! Toque em 'Compartilhar' no navegador e escolha 'Adicionar à Tela de Início'.
     </div>

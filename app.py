@@ -14,59 +14,16 @@ st.set_page_config(
 st.markdown("""
     <link rel="manifest" href="manifest.json">
     <style>
-    /* Esconde o menu do Streamlit e o rodapé para parecer app nativo */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     header {visibility: hidden;}
-    
-    /* Ajuste para remover espaços desnecessários e ficar em tela cheia */
-    .block-container {
-        padding-top: 1rem;
-        padding-bottom: 0rem;
-    }
-
-    /* Estilo dos Botões */
-    .stButton>button {
-        background-color: #A3B18A;
-        color: white;
-        border-radius: 8px;
-        width: 100%;
-    }
-    .stButton>button:hover {
-        background-color: #588157;
-        color: white;
-    }
-    
-    /* Estilo do Disclaimer */
-    .disclaimer-box {
-        background-color: #F4F1DE;
-        padding: 15px;
-        border-radius: 8px;
-        border-left: 5px solid #E07A5F;
-        margin-bottom: 20px;
-    }
-    
-    /* Banner de Instalação (Visível apenas em telas menores/celulares) */
-    .install-banner {
-        display: none;
-        background-color: #E07A5F;
-        color: white;
-        text-align: center;
-        padding: 12px;
-        border-radius: 8px;
-        margin-bottom: 20px;
-        font-size: 0.9em;
-        font-weight: bold;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    
-    @media (max-width: 768px) {
-        .install-banner {
-            display: block;
-        }
-    }
+    .block-container { padding-top: 1rem; padding-bottom: 0rem; }
+    .stButton>button { background-color: #A3B18A; color: white; border-radius: 8px; width: 100%; }
+    .stButton>button:hover { background-color: #588157; color: white; }
+    .disclaimer-box { background-color: #F4F1DE; padding: 15px; border-radius: 8px; border-left: 5px solid #E07A5F; margin-bottom: 20px; }
+    .install-banner { display: none; background-color: #E07A5F; color: white; text-align: center; padding: 12px; border-radius: 8px; margin-bottom: 20px; font-size: 0.9em; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    @media (max-width: 768px) { .install-banner { display: block; } }
     </style>
-    
     <div class="install-banner">
         📲 Dica: Tenha o Guia sempre à mão! Toque em 'Compartilhar' no navegador e escolha 'Adicionar à Tela de Início'.
     </div>

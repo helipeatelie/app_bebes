@@ -2,6 +2,23 @@ import streamlit as st
 import json
 import math
 
+# --- CONEXÃO PWA E LIMPEZA DE INTERFACE ---
+st.markdown("""
+    <link rel="manifest" href="manifest.json">
+    <style>
+        /* Esconde o menu do Streamlit e o rodapé "Made with Streamlit" */
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        header {visibility: hidden;}
+        
+        /* Ajuste para remover espaços desnecessários e ficar em tela cheia */
+        .block-container {
+            padding-top: 1rem;
+            padding-bottom: 0rem;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 # 1. Configurações Iniciais da Página
 st.set_page_config(
     page_title="Guia Sensorial - Helipê Ateliê Lúdico",

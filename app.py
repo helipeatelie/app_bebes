@@ -2,23 +2,6 @@ import streamlit as st
 import json
 import math
 
-# --- CONEXÃO PWA E LIMPEZA DE INTERFACE ---
-st.markdown("""
-    <link rel="manifest" href="manifest.json">
-    <style>
-        /* Esconde o menu do Streamlit e o rodapé "Made with Streamlit" */
-        #MainMenu {visibility: hidden;}
-        footer {visibility: hidden;}
-        header {visibility: hidden;}
-        
-        /* Ajuste para remover espaços desnecessários e ficar em tela cheia */
-        .block-container {
-            padding-top: 1rem;
-            padding-bottom: 0rem;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
 # 1. Configurações Iniciais da Página
 st.set_page_config(
     page_title="Guia Sensorial - Helipê Ateliê Lúdico",
@@ -27,11 +10,24 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# Customização CSS para paleta de cores (Ajuste as cores Hex conforme o site da Helipê)
+# 2. Conexão PWA, Customização CSS e Banner de Instalação
 st.markdown("""
+    <link rel="manifest" href="manifest.json">
     <style>
+    /* Esconde o menu do Streamlit e o rodapé para parecer app nativo */
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    
+    /* Ajuste para remover espaços desnecessários e ficar em tela cheia */
+    .block-container {
+        padding-top: 1rem;
+        padding-bottom: 0rem;
+    }
+
+    /* Estilo dos Botões */
     .stButton>button {
-        background-color: #A3B18A; /* Exemplo: Verde sálvia */
+        background-color: #A3B18A;
         color: white;
         border-radius: 8px;
         width: 100%;
@@ -40,6 +36,8 @@ st.markdown("""
         background-color: #588157;
         color: white;
     }
+    
+    /* Estilo do Disclaimer */
     .disclaimer-box {
         background-color: #F4F1DE;
         padding: 15px;
@@ -47,10 +45,34 @@ st.markdown("""
         border-left: 5px solid #E07A5F;
         margin-bottom: 20px;
     }
+    
+    /* Banner de Instalação (Visível apenas em telas menores/celulares) */
+    .install-banner {
+        display: none;
+        background-color: #E07A5F;
+        color: white;
+        text-align: center;
+        padding: 12px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        font-size: 0.9em;
+        font-weight: bold;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    @media (max-width: 768px) {
+        .install-banner {
+            display: block;
+        }
+    }
     </style>
+    
+    <div class="install-banner">
+        📲 Dica: Tenha o Guia sempre à mão! Toque em 'Compartilhar' no navegador e escolha 'Adicionar à Tela de Início'.
+    </div>
 """, unsafe_allow_html=True)
 
-# 2. Carregamento dos Dados JSON
+# 3. Carregamento dos Dados JSON
 @st.cache_data
 def carregar_dados():
     try:
@@ -62,13 +84,17 @@ def carregar_dados():
 
 dados = carregar_dados()
 
-# 3. Cabeçalho
-st.image("assets/img/logo_helipe.png", use_container_width=True) # Certifique-se de ter essa logo na pasta
+# 4. Cabeçalho
+try:
+    st.image("assets/img/logo_helipe.png", use_container_width=True)
+except:
+    st.warning("Logo em carregamento...")
+
 st.title("52 Semanas de Descobertas")
 st.markdown("O Guia Sensorial da Mente Absorvente para o primeiro ano do seu bebê.")
 st.divider()
 
-# 4. Inputs do Usuário
+# 5. Inputs do Usuário
 col1, col2 = st.columns(2)
 
 with col1:
@@ -77,7 +103,7 @@ with col1:
 with col2:
     unidade_input = st.selectbox("Medida em:", ["Semanas", "Meses"])
 
-# 5. Lógica de Conversão (Meses para Semanas)
+# 6. Lógica de Conversão (Meses para Semanas)
 semana_calculada = idade_input
 
 if unidade_input == "Meses":
@@ -87,7 +113,7 @@ if unidade_input == "Meses":
         semana_calculada = 52
     st.caption(f"💡 {idade_input} meses correspondem aproximadamente à semana {semana_calculada}.")
 
-# 6. Lógica de Busca no JSON e Renderização
+# 7. Lógica de Busca no JSON e Renderização
 if dados:
     faixa_encontrada = None
     
@@ -122,7 +148,7 @@ if dados:
                     st.image(item["imagem_caminho"], use_container_width=True)
                 except:
                     # Imagem de fallback caso a original não esteja na pasta
-                    st.image("https://via.placeholder.com/300x300.png?text=Imagem+Atividade", use_container_width=True)
+                    st.image("https://via.placeholder.com/300x300.png?text=Em+Breve", use_container_width=True)
             
             with col_txt:
                 st.markdown(f"### {item['titulo']}")
@@ -135,7 +161,7 @@ if dados:
                 
             st.divider()
 
-        # 7. Selo de Qualidade e Disclaimer
+        # Selo de Qualidade e Disclaimer
         st.markdown("""
         <div class="disclaimer-box">
             <strong>Qualidade Helipê:</strong> Nossos materiais são artesanais, finalizados com óleo de tungue puro e fios 100% algodão, garantindo total segurança para a exploração tátil e oral do seu bebê.

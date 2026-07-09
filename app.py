@@ -127,9 +127,12 @@ if dados:
                 st.markdown(f"**Como fazer:** {item['atividade_descricao']}")
                 st.markdown(f"⏱️ **Tempo sugerido:** {item['tempo_duracao']}")
                 
-                # Botão de Compra se houver link de produto
-                if item.get("link_produto"):
-                    st.link_button("Ver Produto no Ateliê", item["link_produto"])
+      # Botão de Compra ou Aviso de Indisponibilidade
+                link = item.get("link_produto")
+                if link and link.strip() != "":
+                    st.link_button("Ver Produto no Ateliê", link)
+                else:
+                    st.info("Estamos sem esse produto no momento, mas pode conferir nossos outros produtos na loja [www.helipe.com.br](https://www.helipe.com.br)")
                 
             st.divider()
 

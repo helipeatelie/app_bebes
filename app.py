@@ -12,26 +12,26 @@ st.set_page_config(
 
 # 2. Conexão PWA, Customização CSS e Banner de Instalação
 st.markdown("""
-    <!-- Força o reconhecimento de App no iOS e Android -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     
     <style>
-    /* Esconde o menu do Streamlit, o rodapé e o header */
-    #MainMenu {visibility: hidden !important;}
-    footer {visibility: hidden !important;}
-    header {visibility: hidden !important;}
+    /* 1. Esconde o cabeçalho, rodapé e menu do Streamlit (Força bruta) */
+    header {visibility: hidden !important; display: none !important;}
+    footer {visibility: hidden !important; display: none !important;}
+    [data-testid="stHeader"] {display: none !important;}
+    [data-testid="stFooter"] {display: none !important;}
+    [data-testid="stToolbar"] {display: none !important;}
     
-    /* ESCONDE A MARCA D'ÁGUA "Hosted with Streamlit" */
-    a[href^="https://streamlit.io/cloud"] {display: none !important;}
-    
-    /* ESCONDE O BOTÃO FULLSCREEN DAS IMAGENS */
+    /* 2. Esconde o Botão Fullscreen e o Balão do Streamlit */
     button[title="View fullscreen"] {display: none !important;}
+    [data-testid="StyledFullScreenButton"] {display: none !important;}
+    .viewerBadge_container__1QSob {display: none !important;}
     
-    /* Ajuste de espaçamento para tela cheia */
+    /* 3. Ajuste de espaçamento para ficar limpo */
     .block-container { padding-top: 1rem; padding-bottom: 0rem; }
     
-    /* Estilos Adicionais */
+    /* 4. Estilos dos Botões Helipê e Caixas */
     .stButton>button { background-color: #A3B18A; color: white; border-radius: 8px; width: 100%; }
     .stButton>button:hover { background-color: #588157; color: white; }
     .disclaimer-box { background-color: #F4F1DE; padding: 15px; border-radius: 8px; border-left: 5px solid #E07A5F; margin-bottom: 20px; }
@@ -40,7 +40,7 @@ st.markdown("""
     </style>
     
     <div class="install-banner">
-        📲 Dica: Tenha o Guia sempre à mão! Toque nos 3 pontos ao lado da URL e procure a opção 'Adicionar à Tela Inícial'.
+        📲 Dica: Tenha o Guia sempre à mão! Toque nos 3 pontos ao lado da URL e procure a opção 'Adicionar à Tela Inicial'.
     </div>
 """, unsafe_allow_html=True)
 

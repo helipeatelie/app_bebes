@@ -1,20 +1,17 @@
 name: Robo Anti-Hibernacao Streamlit
 
-# Define quando o robô vai rodar
 on:
   schedule:
-    # Roda automaticamente a cada 2 dias, ao meio-dia
-    - cron: "0 12 */2 * *"
-  # Permite que você ative o robô manualmente se quiser testar
+    # Roda TODOS OS DIAS ao meio-dia (horário UTC)
+    - cron: "0 12 * * *"
   workflow_dispatch:
 
 jobs:
   ping_site:
     runs-on: ubuntu-latest
     steps:
-      - name: Acessando o App da Helipê
-        # O comando 'curl' simula um navegador acessando o seu link
-        run: curl -s https://guia52semanas.streamlit.app > /dev/null
+      - name: Acessando o App com disfarce de Google Chrome
+        run: curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -s https://guia52semanas.streamlit.app > /dev/null
       
       - name: Sucesso
-        run: echo "O aplicativo foi acessado e continua acordado!"
+        run: echo "Ping enviado com máscara de navegador!"

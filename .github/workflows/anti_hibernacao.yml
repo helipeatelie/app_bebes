@@ -1,0 +1,47 @@
+name: Robo Anti-Hibernacao Avancado
+
+on:
+  schedule:
+    # Roda duas vezes ao dia (Meio-dia e Meia-noite)
+    - cron: "0 0,12 * * *"
+  workflow_dispatch:
+
+jobs:
+  acordar_app:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configurar sistema
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Instalar Navegador Real (Puppeteer)
+        run: npm install puppeteer
+        
+      - name: Simular Visita Humana
+        run: |
+          node -e "
+          const puppeteer = require('puppeteer');
+          (async () => {
+            console.log('Iniciando Chrome invisível...');
+            // Inicia o navegador
+            const browser = await puppeteer.launch({ headless: 'new' });
+            const page = await browser.newPage();
+            
+            // Simula a tela de um celular
+            await page.setViewport({ width: 412, height: 915 });
+            
+            console.log('Acessando o Guia Helipê...');
+            // Acessa o link e espera a rede acalmar (garante que o app abriu)
+            await page.goto('https://guia52semanas.streamlit.app', { waitUntil: 'networkidle2', timeout: 60000 });
+            
+            console.log('Página acessada! Esperando 15 segundos para o Streamlit registrar a conexão Websocket...');
+            await new Promise(resolve => setTimeout(resolve, 15000));
+            
+            console.log('Visita concluída com sucesso! Fechando navegador.');
+            await browser.close();
+          })().catch(err => {
+            console.error('Erro ao acessar:', err);
+            process.exit(1);
+          });
+          "
